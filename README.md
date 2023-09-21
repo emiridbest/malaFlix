@@ -37,3 +37,7 @@ Bonus:
     Video: https://www.loom.com/share/298707424ea741b88f7a69da8993b46c
     Tweet: https://twitter.com/EmiriDbest/status/1704910694288904204?t=ExpOXfbGU-_P0EanF7zRtQ&s=19
 
+
+Challengges:
+
+Superfluid not supporting Gnosis testnet.
