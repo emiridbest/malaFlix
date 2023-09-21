@@ -2,38 +2,38 @@
 # malaFlix
 A social video streaming DApp where creators earn directly as user stream their contents
 =======
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Title: Decentralized Streaming Platform - MalaFlix
 
-## Getting Started
+Description:
 
-First, run the development server:
+MalaFlix is a revolutionary decentralized streaming platform that combines the best features of popular streaming services like Netflix and TikTok while adding a unique twist. With MalaFlix, content creators can directly earn funds as viewers watch their content, thanks to the integration of Superfluid, a real-time financial protocol. This platform offers a decentralized, censorship-resistant, and fair environment for both content creators and viewers.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Smart Contract:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Network: Mainnet
+    Contract Address: 
+    gnosisscan.io: Link to Contract on GnosisScan
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Transactions:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    Transaction Hash 1
+    Transaction Hash 2
 
-## Learn More
+Originality:
 
-To learn more about Next.js, take a look at the following resources:
+This project is an entirely original work by our dedicated team. We built MalaFlix on top of the following tooling:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Solidity Smart Contracts
+    Lens Protocol for decentralized identity management
+    Superfluid for real-time financial streaming
+    Apollo Client for GraphQL integration
+    Wagmi for interacting with the blockchain
+    Web3.js for Ethereum blockchain integration
+    Next.js for the frontend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Bonus:
 
-## Deploy on Vercel
+    Demo: Link to MalaFlix Demo
+    Video: Link to MalaFlix Video
+    Tweet: Link to MalaFlix Tweet
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
->>>>>>> b95e195 (Initial commit from Create Next App)
