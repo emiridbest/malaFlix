@@ -11,7 +11,7 @@ MalaFlix is a revolutionary decentralized streaming platform that combines the b
 Smart Contract:
 
     Network: Gnosis Mainnet
-    Contract Address: 0x291e6c4a1a834e9ec4bd33ffdb2e7c90680abd5e
+    Contract Address: 0x291e6c4a1a834e9ec4bd33ffdb2e7c90680abd5e //mistakenly posted a wallet address instead of a contract address
     gnosisscan.io: https://gnosisscan.io/address/0x291e6c4a1a834e9ec4bd33ffdb2e7c90680abd5e
 
 Transactions:
@@ -33,7 +33,7 @@ This project is an entirely original work by our dedicated team. We built MalaFl
 
 Bonus:
 
-    Demo: https://www.loom.com/share/298707424ea741b88f7a69da8993b46c
+    Demo: https://www.loom.com/share/3e70b31a92e648e491b24e921bb908fd //the former link was a duplicate of the video link below
     Video: https://www.loom.com/share/298707424ea741b88f7a69da8993b46c
     Tweet: https://twitter.com/EmiriDbest/status/1704910694288904204?t=ExpOXfbGU-_P0EanF7zRtQ&s=19
 
