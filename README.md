@@ -38,6 +38,15 @@ Bonus:
     Tweet: https://twitter.com/EmiriDbest/status/1704910694288904204?t=ExpOXfbGU-_P0EanF7zRtQ&s=19
 
 
-Challengges:
+Challenges:
 
 Superfluid not supporting Gnosis testnet.
+
+![Screenshot from 2023-09-21 19-01-29](https://github.com/emiridbest/malaFlix/assets/6362475/6ebd4f0c-61f3-42e3-b6cb-321c9d3e6398)
+
+![Screenshot from 2023-09-21 19-01-42](https://github.com/emiridbest/malaFlix/assets/6362475/2b1694a0-b3aa-422d-aa71-93f5a0e19958)
+
+![Screenshot from 2023-09-21 19-01-36](https://github.com/emiridbest/malaFlix/assets/6362475/20215599-b712-4a6d-8912-3e58c3d3d78d)
+
+
+
