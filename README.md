@@ -59,8 +59,7 @@ Superfluid not supporting Gnosis testnet.
 ![7](https://github.com/emiridbest/malaFlix/assets/6362475/f21180c4-0781-46ab-b7e1-fb0d8fdb7e3c)
 ![8](https://github.com/emiridbest/malaFlix/assets/6362475/1519b4ee-8154-4f16-a192-0b547b5467e3)
 
-
-![9](https://github.com/emiridbest/malaFlix/assets/6362475/5226f1c7-638d-4f8d-a17b-423dd1906e94)
+![9](https://github.com/emiridbest/malaFlix/assets/6362475/0663b9f1-e365-4b40-828a-a71ccd541877)
 
 
 ![10](https://github.com/emiridbest/malaFlix/assets/6362475/4fe74525-4586-476f-8b3f-31c06e7b474d)
