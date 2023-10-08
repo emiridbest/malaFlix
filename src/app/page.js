@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import SuperfluidWidget from "@superfluid-finance/widget";
 import superTokenList from "@superfluid-finance/tokenlist";
 import { WagmiConfig } from "wagmi";
@@ -14,7 +14,6 @@ import AddVideo from "../components/AddVideo";
 import VideoCard from "../components/VideoCard";
 import { Footer, Sidebar, Header, VideoModal } from "../components/Index";
 
-
 export default function Home() {
   const [walletAddress, setWalletAddress] = useState("");
   const [existingLensWallet, setExistingLensWallet] = useState("");
@@ -27,41 +26,32 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalVideoItem, setModalVideoItem] = useState(null); // Define modalVideoItem
 
-
-  const [found, setFound] = useState(false);
-
-  const get = async () => {
-    const modalElement = document.querySelector('connectModalOpen'); // Replace with the actual selector for your modal
-    const spanElement = modalElement.querySelector('span.MuiTypography-root');
-    const textContent = spanElement.textContent;
-
-    if (textContent.includes('Success! Your purchase was confirmed.')) {
-      // Perform actions when the success message is found
-      console.log('Success message found');
-      setFound(true); // Set a state variable to indicate that the message is found
-      // You can also close the modal or update the app's state here
-    } else {
-      // If the message is not found, wait for a while and check again
-      setTimeout(get, 100); // Adjust the delay (in milliseconds) as needed
-    }
-  };
-
   useEffect(() => {
-    if (!found) {
-      get(); // Start the initial check
+    async function checkIfWalletIsConnected() {
+      if (window.ethereum) {
+        try {
+          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+          setAccount(accounts[0]);
+        } catch (error) {
+          console.error("Error connecting to MetaMask:", error);
+        }
+      } else {
+        console.log("MetaMask extension not found.");
+      }
     }
-  }, [found]);
-
-  const initializeWeb3 = async () => {
+  
+    checkIfWalletIsConnected();
+  }, []);
+  
+  const initializeWeb3 = useCallback (async () => {
     if (window.ethereum) {
       try {
         await window.ethereum.enable();
         const web3 = new Web3(window.ethereum);
 
-        const accounts = await web3.eth.getAccounts();
         const contract = new web3.eth.Contract(contractAbi, contractAddress);
 
-        setAccount(accounts[0]);
         setContract(contract);
       } catch (error) {
         console.error("Error initializing web3:", error);
@@ -69,11 +59,12 @@ export default function Home() {
     } else {
       console.log("MetaMask extension not found.");
     }
-  };
+  }, [contractAddress]);
 
   useEffect(() => {
-    initializeWeb3();
-  }, []);
+    if(account){
+    initializeWeb3();}
+  }, [account, initializeWeb3]);
 
   async function fetchProfile() {
     try {
@@ -137,27 +128,24 @@ export default function Home() {
 
   useEffect(() => {
     fetchVideoList();
-  }, [contract, account]);
-
+  }, [contract]);
 
   const handleWatchVideo = async (videoItem) => {
-
     try {
       if (videoItem.creator) {
         console.log(videoItem.creator);
         setWalletAddress(videoItem.creator);
       }
 
-      if(!play) {
+      if (!play) {
         setLensHandleExists("true");
         setExistingLensWallet(walletAddress);
         setNonExistingLensWallet("");
       }
-     if(play && videoItem.videoURL) {
+      if (play && videoItem.videoURL) {
         console.log(videoItem.videoURL);
-      setModalVideoItem(videoItem.videoURL);
-      setIsModalOpen(true);
-
+        setModalVideoItem(videoItem.videoURL);
+        setIsModalOpen(true);
       }
 
       // Call your existing functions to check Lens Protocol
@@ -166,9 +154,9 @@ export default function Home() {
     }
   };
   useEffect(() => {
-    if(play) {
-    handleWatchVideo();
-  }
+    if (play) {
+      handleWatchVideo();
+    }
   }, [play]);
   async function addVideo(title, description, thumbnail, CID) {
     try {
@@ -181,7 +169,12 @@ export default function Home() {
         return;
       }
 
-      const tx = await contract.methods.addVideo(title, description, thumbnail, CID);
+      const tx = await contract.methods.addVideo(
+        title,
+        description,
+        thumbnail,
+        CID
+      );
 
       // Send the transaction
       const txResponse = await window.ethereum.request({
@@ -212,30 +205,30 @@ export default function Home() {
     <main className="container mx-auto p-1">
       <Header />
       <div>
-      <Sidebar />
-      {isModalOpen && modalVideoItem && (
-        <VideoModal
-          videoURL={modalVideoItem}
-          onClose={() => setIsModalOpen(false)}
-        />
-      )}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-10 ">
-        {video.map((videoItem) => (
-       <VideoCard
-       key={videoItem.id}
-       videoItem={{
-         title: videoItem.title,
-         description: videoItem.description,
-         creator: videoItem.creator,
-         thumbnail: `https://gateway.pinata.cloud/ipfs/${videoItem.thumbnail}`,
-         videoURL: `https://gateway.pinata.cloud/ipfs/${videoItem.CID}`,
-         id: videoItem.id,
-       }}
-       handleWatchVideo={handleWatchVideo}
-     />
-   ))}
- </div>
-      <div/>
+        <Sidebar />
+        {isModalOpen && modalVideoItem && (
+          <VideoModal
+            videoURL={modalVideoItem}
+            onClose={() => setIsModalOpen(false)}
+          />
+        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-10 ">
+          {video.map((videoItem) => (
+            <VideoCard
+              key={videoItem.id}
+              videoItem={{
+                title: videoItem.title,
+                description: videoItem.description,
+                creator: videoItem.creator,
+                thumbnail: `https://gateway.pinata.cloud/ipfs/${videoItem.thumbnail}`,
+                videoURL: `https://gateway.pinata.cloud/ipfs/${videoItem.CID}`,
+                id: videoItem.id,
+              }}
+              handleWatchVideo={handleWatchVideo}
+            />
+          ))}
+        </div>
+        <div />
       </div>
       <section className="hidden">
         <section className="w-1/2 ml-10">
@@ -286,18 +279,19 @@ export default function Home() {
                   return (
                     <section>
                       <SuperfluidWidget
-                                   productDetails={productDetails}
+                        productDetails={productDetails}
                         paymentDetails={{
                           paymentOptions: customPaymentDetails,
                         }}
                         tokenList={superTokenList}
                         type="dialog"
                         walletManager={walletManager}
-                        onSuccess={() => {
-                          setPlay(true);
-                          console.log("onSuccess");
-                          closeModal();
-                        }} >
+                        eventListeners={{
+                          onSuccess: () => {
+                            setPlay(true);
+                          },
+                        }}
+                      >
                         {({ openModal }) => (
                           <button
                             onClick={() => {
