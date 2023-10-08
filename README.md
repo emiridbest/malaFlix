@@ -7,8 +7,7 @@ Description:
 
 MalaFlix is a revolutionary decentralized streaming platform that combines the best features of popular streaming services like Netflix and TikTok while adding a unique twist. With MalaFlix, content creators can directly earn funds as viewers watch their content, thanks to the integration of Superfluid, a real-time financial protocol. This platform offers a decentralized, censorship-resistant, and fair environment for both content creators and viewers.
 
-
-Originality:
+  
 
 This project is an entirely original work by our dedicated team. We built MalaFlix on top of the following tooling:
     Magic sdk for social authentication
@@ -20,9 +19,7 @@ This project is an entirely original work by our dedicated team. We built MalaFl
     Web3.js for Ethereum blockchain integration
     Next.js for the frontend
 
-Bonus:
-
-    Demo: 
+    Demo: https://youtu.be/KpYYdSA45zU
 
 
 Challenges:
