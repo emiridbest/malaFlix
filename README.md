@@ -27,7 +27,7 @@ Bonus:
 
 Challenges:
 
-Superfluid not supporting Gnosis testnet.
+Superfluid not supporting some testnet.
 
 ![1](https://github.com/emiridbest/malaFlix/assets/6362475/84ca75b3-01c7-4084-b56a-e67ff1e7a1ca)
 
