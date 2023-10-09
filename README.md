@@ -10,6 +10,7 @@ MalaFlix is a revolutionary decentralized streaming platform that combines the b
   
 
 This project is an entirely original work by our dedicated team. We built MalaFlix on top of the following tooling:
+
     Magic sdk for social authentication
     Solidity Smart Contracts
     Lens Protocol for decentralized identity management
