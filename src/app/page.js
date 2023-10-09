@@ -138,9 +138,7 @@ export default function Home() {
       }
 
       if (!play) {
-        setLensHandleExists("true");
-        setExistingLensWallet(walletAddress);
-        setNonExistingLensWallet("");
+        fetchProfile();
       }
       if (play && videoItem.videoURL) {
         console.log(videoItem.videoURL);
