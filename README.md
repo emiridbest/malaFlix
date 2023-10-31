@@ -63,3 +63,4 @@ Superfluid not supporting some testnet.
 ![12](https://github.com/emiridbest/malaFlix/assets/6362475/270a8291-c5a3-49aa-b1ca-e75b3cb2db84)
 
 
+# theGoodFaucet
