@@ -1,0 +1,81 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract MalaFlix is Ownable {
+
+    struct Video {
+        uint256 id;
+        string title;
+        string description;
+        string thumbnail;
+        string CID;
+        address creator;
+        bool isStreaming;
+    }
+
+    Video[] public videoList;
+    mapping(uint256 => address) public owner;
+    mapping(address => uint256[]) public userVideos;
+
+    event VideoUploaded(
+        uint256 indexed videoId,
+        string title,
+        string thumbnail,
+        string CID,
+        address indexed creator
+    );
+
+    event VideoWatched(
+        uint256 indexed videoId,
+        address indexed viewer
+    );
+
+    function addVideo(
+        string memory title,
+        string memory description,
+        string memory thumbnail,
+        string memory CID
+    ) external {
+        uint256 videoId = videoList.length + 1;
+        videoList.push(
+            Video(
+                videoId,
+                title,
+                description,
+                thumbnail,
+                CID,
+                msg.sender,
+                false
+            )
+        );
+        owner[videoId] = msg.sender;
+        emit VideoUploaded(videoId, title, thumbnail, CID, msg.sender);
+    }
+
+    function watchVideo(uint256 videoId) external {
+        require(videoId > 0 && videoId <= videoList.length, "Video does not exist");
+
+        Video storage video = videoList[videoId - 1];
+        // Add logic here for tracking video views or other actions
+        emit VideoWatched(videoId, msg.sender);
+    }
+
+    // Function to update streaming status of a video
+    function updateStreamingStatus(uint256 videoId, bool isStreamingStatus) external onlyOwner {
+        require(videoId > 0 && videoId <= videoList.length, "Video does not exist");
+        videoList[videoId - 1].isStreaming = isStreamingStatus;
+    }
+
+    // Function to get all videos with streaming status
+    function getAllVideos() external view returns (uint256[] memory) {
+        uint256[] memory videos = new uint256[](videoList.length);
+
+        for (uint256 i = 0; i < videoList.length; i++) {
+            videos[i] = videoList[i].id;
+        }
+
+        return videos;
+    }
+}
