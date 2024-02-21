@@ -31,7 +31,7 @@ export default function Home() {
       if (window.ethereum) {
         try {
           await window.ethereum.request({ method: 'eth_requestAccounts' });
-          const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
           setAccount(accounts[0]);
         } catch (error) {
           console.error("Error connecting to MetaMask:", error);
@@ -59,7 +59,7 @@ export default function Home() {
     } else {
       console.log("MetaMask extension not found.");
     }
-  }, [contractAddress]);
+  }, []);
 
   useEffect(() => {
     if(account){
@@ -105,7 +105,8 @@ export default function Home() {
     };
   });
 
-  const fetchVideoList = async () => {
+  const fetchVideoList = useCallback(async () => {
+    if (account && contract){
     try {
       const videoIds = await contract.methods.getAllVideos().call();
 
@@ -124,13 +125,17 @@ export default function Home() {
     } catch (error) {
       console.error("Error fetching video list:", error);
     }
-  };
+  }});
+
 
   useEffect(() => {
     fetchVideoList();
-  }, [contract]);
+  }, []);
 
-  const handleWatchVideo = async (videoItem) => {
+
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleWatchVideo = useCallback(async (videoItem) => {
     try {
       if (videoItem.creator) {
         console.log(videoItem.creator);
@@ -150,12 +155,12 @@ export default function Home() {
     } catch (error) {
       console.error("Error watching video:", error);
     }
-  };
+  });
   useEffect(() => {
     if (play) {
       handleWatchVideo();
     }
-  }, [play]);
+  }, [handleWatchVideo, play]);
   async function addVideo(title, description, thumbnail, CID) {
     try {
       console.log(title, description, thumbnail, CID);
@@ -258,7 +263,7 @@ export default function Home() {
             )}
             {lensHandleExists === "false" && (
               <section>
-                {nonExistingLensWallet} doesn't have a Lens handle
+                {nonExistingLensWallet} does not have a Lens handle
               </section>
             )}
           </section>

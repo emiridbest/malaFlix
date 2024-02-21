@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import Image from "next/image";
+import VideoModal from "./VideoModal";
 
 const VideoCard = ({ videoItem, handleWatchVideo }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-
 
   return (
     <div className="relative">
@@ -12,12 +12,14 @@ const VideoCard = ({ videoItem, handleWatchVideo }) => {
         style={{
           width: "300px",
           height: "200px",
-          position: "relative", 
+          position: "relative",
         }}
       >
-        <img
+        <Image
           src={videoItem.thumbnail}
           alt="Video Thumbnail"
+          width="300"
+          height= "200"
           className="w-full h-full object-cover"
         />
         <div
