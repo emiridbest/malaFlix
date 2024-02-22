@@ -31,7 +31,7 @@ export default function Home() {
       if (window.ethereum) {
         try {
           await window.ethereum.request({ method: 'eth_requestAccounts' });
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          const accounts = await window.ethereum.request({ method: 'eth_accounts' });
           setAccount(accounts[0]);
         } catch (error) {
           console.error("Error connecting to MetaMask:", error);
@@ -125,12 +125,12 @@ export default function Home() {
     } catch (error) {
       console.error("Error fetching video list:", error);
     }
-  }});
+  }},[account, contract]);
 
 
   useEffect(() => {
     fetchVideoList();
-  }, []);
+  }, [fetchVideoList]);
 
 
 
