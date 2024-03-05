@@ -1,24 +1,5 @@
-export const contractAddress= "0x3491dfb0362f6a923b40246c7c64a0e8f6f372d9"
+export const contractAddress= "0x79a4ad75fc5360a25ad09ab4bb2fa9a77d1663ae"; //"0x3491dfb0362f6a923b40246c7c64a0e8f6f372d9" //0x6c432a07d2c7c5abbbbb47e408c5ecc40eea0c4b  //"0x291e6c4a1a834e9ec4bd33ffdb2e7c90680abd5e" //0x3491dfb0362f6a923b40246c7c64a0e8f6f372d9
 export const contractAbi = [
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "previousOwner",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "OwnershipTransferred",
-		"type": "event"
-	},
 	{
 		"anonymous": false,
 		"inputs": [
@@ -104,44 +85,6 @@ export const contractAbi = [
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "transferOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "videoId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bool",
-				"name": "isStreamingStatus",
-				"type": "bool"
-			}
-		],
-		"name": "updateStreamingStatus",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -162,19 +105,6 @@ export const contractAbi = [
 				"internalType": "uint256[]",
 				"name": "",
 				"type": "uint256[]"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
 			}
 		],
 		"stateMutability": "view",
@@ -272,4 +202,4 @@ export const contractAbi = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-]
+];
