@@ -25,43 +25,27 @@ This project is an entirely original work by our dedicated team. We built MalaFl
 
 Challenges:
 
-Superfluid not supporting some testnet.
+Superfluid not supporting some testnet. So project had to be depoloyed on BSC mainnet
 
-![1](https://github.com/emiridbest/malaFlix/assets/6362475/84ca75b3-01c7-4084-b56a-e67ff1e7a1ca)
-
-![2](https://github.com/emiridbest/malaFlix/assets/6362475/b5156699-7fbc-4679-a18a-e05e09f46136)
-
-![3](https://github.com/emiridbest/malaFlix/assets/6362475/f7c8febe-c691-4597-8ecf-aea4d40e0e66)
-
-
-![4](https://github.com/emiridbest/malaFlix/assets/6362475/ba980e38-d59f-4cd4-868c-bb1e81a2e05d)
-
-![5](https://github.com/emiridbest/malaFlix/assets/6362475/3c5039ee-f97f-42a1-9f6a-ed20ded66cfa)
-
-
-![6](https://github.com/emiridbest/malaFlix/assets/6362475/0c560ca0-bc86-41cd-86bf-a96ace1379fd)
-
-![7](https://github.com/emiridbest/malaFlix/assets/6362475/f21180c4-0781-46ab-b7e1-fb0d8fdb7e3c)
-![8](https://github.com/emiridbest/malaFlix/assets/6362475/1519b4ee-8154-4f16-a192-0b547b5467e3)
-
-![9](https://github.com/emiridbest/malaFlix/assets/6362475/0663b9f1-e365-4b40-828a-a71ccd541877)
-
-
-![10](https://github.com/emiridbest/malaFlix/assets/6362475/4fe74525-4586-476f-8b3f-31c06e7b474d)
-
-![11](https://github.com/emiridbest/malaFlix/assets/6362475/a016bb4c-d429-49fe-a1c0-af9da584bbc2)
+![2](https://github.com/emiridbest/Matube/assets/6362475/460e1540-76da-41a1-bae7-66089109dd7e)
+![3](https://github.com/emiridbest/Matube/assets/6362475/a3b54130-2ddb-462a-a32d-73da1dba4526)
 
 
 
 
-![Screenshot from 2023-09-21 19-01-29](https://github.com/emiridbest/malaFlix/assets/6362475/6ebd4f0c-61f3-42e3-b6cb-321c9d3e6398)
+![6](https://github.com/emiridbest/Matube/assets/6362475/5d5f3349-5a28-4361-ad9b-82f3dc3a5635)
 
-![Screenshot from 2023-09-21 19-01-42](https://github.com/emiridbest/malaFlix/assets/6362475/2b1694a0-b3aa-422d-aa71-93f5a0e19958)
+![7](https://github.com/emiridbest/Matube/assets/6362475/82b2a83e-9d81-4f77-a7fa-3dd6e6775429)
 
-![Screenshot from 2023-09-21 19-01-36](https://github.com/emiridbest/malaFlix/assets/6362475/20215599-b712-4a6d-8912-3e58c3d3d78d)
+![8](https://github.com/emiridbest/Matube/assets/6362475/cd7cdf97-8758-4979-9c7e-d8d1da5097c0)
 
-![12](https://github.com/emiridbest/malaFlix/assets/6362475/270a8291-c5a3-49aa-b1ca-e75b3cb2db84)
+![9](https://github.com/emiridbest/Matube/assets/6362475/7c023038-56df-41f1-b008-0fd49826b0ac)
+
+![10](https://github.com/emiridbest/Matube/assets/6362475/00e92fda-96f8-49db-b77f-51f8d77f260b)
+
+![11](https://github.com/emiridbest/Matube/assets/6362475/cfc857cb-6eec-4397-a841-696c63065dda)
+
+![12](https://github.com/emiridbest/Matube/assets/6362475/071e84c2-f566-4003-8067-ef4c1539cbcd)
 
 
-# theGoodFaucet
-# theGoodFaucet
+
